@@ -17,7 +17,7 @@
             // Connect to 
             cometd.handshake($A.getCallback(function(status) {
                 if (status.successful) {
-                    helper.displayToast(component,"success","Subsribed to Event Channel");
+                    helper.displayToast(component,"success","Subscribed to Event Channel");
                     var eventName = component.get("v.channel");
                     var subscription = 
                         cometd.subscribe(eventName, $A.getCallback(function(message) {
@@ -32,7 +32,7 @@
                 } else {
                     // TODO: Throw an event / set error property here?
                     console.error('streaming component: ' + status);
-					helper.displayToast(component,"error","Failed to subsribed to Event Channel");
+					helper.displayToast(component,"error","Failed to subscribed to Event Channel");
                 }
             }));
 
